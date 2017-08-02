@@ -28,4 +28,8 @@ export class HomePage {
       );
   }
 
+  goToDetails(country){
+    this.navCtrl.push('DetailsPage', {country: country});
+  }
+
 }

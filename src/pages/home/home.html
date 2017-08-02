@@ -7,21 +7,12 @@
 <ion-content padding>
   
   <ion-list>
-    <ion-card *ngFor="let c of countries">
-      <img src="{{c.flag}}">
+    <ion-card *ngFor="let country of countries" (click)="goToDetails(country)">
+      <img src="{{country.flag}}">
       <ion-card-content>
-        <ion-card-title>{{c.name}}</ion-card-title>
-        <p>Capital: {{c.capital}}, Region: {{c.region}}</p>
+        <ion-card-title>{{country.name}}</ion-card-title>
+        <p>Capital: {{country.capital}}, Region: {{country.region}}</p>
       </ion-card-content>
     </ion-card>
-    <!--
-    <ion-item *ngFor="let c of countries">
-      <ion-avatar item-left>
-        <img src="{{c.flag}}">
-      </ion-avatar>
-      <h2>{{c.name}}</h2>
-      <p>Capital: {{c.capital}}, Region: {{c.region}}</p>
-    </ion-item>
-    -->
   </ion-list>
 </ion-content>
